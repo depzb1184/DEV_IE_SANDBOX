@@ -3,8 +3,8 @@
 
 {% set sql %}
 create or replace stage bronze.azure_stage
-  url = 'azure://stgdeviesandbox.blob.core.windows.net/devie'
-  storage_integration = my_azure_integration
+  url = 'azure://stgaccdeviesandbox.blob.core.windows.net/devie'
+  storage_integration = AZURE_INTEGRATION
   file_format = (type = csv field_optionally_enclosed_by='"' skip_header=1);
 {% endset %}
 
