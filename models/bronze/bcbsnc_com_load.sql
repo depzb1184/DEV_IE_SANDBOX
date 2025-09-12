@@ -1,7 +1,7 @@
 {{ config(
     materialized='table',
     schema='BRONZE',
-    alias='BCBSNC_LOAD2'
+    alias='BCBSNC_LOAD3'
 ) }}
 
 SELECT
@@ -111,4 +111,4 @@ SELECT
     TRY_TO_NUMBER($104) AS PRACTN_LOW_AGE_LMT_NBR,
     TRY_TO_NUMBER($105) AS PRACTN_UP_AGE_LMT_NBR
 FROM @BRONZE.AZURE_STAGE
-(FILE_FORMAT => 'CSV')
+(FILE_FORMAT => 'BRONZE.CSV')
